@@ -362,7 +362,7 @@ TangoErrorType AugmentedRealityApp::UpdateExtrinsics() {
   ret = TangoService_getPoseAtTime(0.0, frame_pair, &pose_data);
   if (ret != TANGO_SUCCESS) {
     LOGE(
-        "PointCloudApp: Failed to get transform between the IMU frame and "
+        "AugmentedRealityApp: Failed to get transform between the IMU frame and "
         "device frames");
     return ret;
   }
@@ -374,7 +374,7 @@ TangoErrorType AugmentedRealityApp::UpdateExtrinsics() {
   ret = TangoService_getPoseAtTime(0.0, frame_pair, &pose_data);
   if (ret != TANGO_SUCCESS) {
     LOGE(
-        "PointCloudApp: Failed to get transform between the color camera frame "
+        "AugmentedRealityApp: Failed to get transform between the color camera frame "
         "and device frames");
     return ret;
   }
